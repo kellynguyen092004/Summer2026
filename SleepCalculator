@@ -1,0 +1,20 @@
+package Java;
+
+import java.util.Scanner;
+
+public class SleepCalculator {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the amount of ounces the baby has drank: ");
+		double milk = input.nextDouble();
+		
+		if (milk >= 6.0) {
+			System.out.println("Baby will sleep well for 5 hours.");
+		} else {
+			System.out.println("Baby will not sleep well. So be prepared.");
+		}
+		
+		input.close();
+	}
+}
