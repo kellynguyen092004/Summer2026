@@ -1,0 +1,28 @@
+package Java;
+
+import java.util.Scanner;
+
+public class ShippingCalculator {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the price of the sale item: ");
+		double price = input.nextDouble();
+		
+		input.nextLine();
+		System.out.print("Enter the shipping state: ");
+		String state = input.nextLine().trim();
+		
+		double shippingTax;
+        if (state.equalsIgnoreCase("TX") || state.equalsIgnoreCase("LA")) {
+        	shippingTax = 1.25;
+        } else if (state.equalsIgnoreCase("CA")) {
+        	shippingTax = 3.25;
+        } else {
+        	shippingTax = 0.50;
+        }
+        
+        input.close();
+        
+	}
+}
